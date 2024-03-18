@@ -51,12 +51,12 @@ export default function Login() {
   return (
     <>
       <div
-        className="naxatw-h-screen naxatw-w-full naxatw-flex-col naxatw-items-center naxatw-justify-center
+        className="naxatw-flex naxatw-h-screen naxatw-w-full naxatw-flex-col naxatw-items-center naxatw-justify-center
         naxatw-bg-primary-50"
       >
         <form
           onSubmit={handleSubmit(onSubmit)}
-          className="naxatw-flex naxatw-w-[60%] naxatw-flex-col naxatw-gap-5 naxatw-pt-7"
+          className="naxatw-flex naxatw-w-[60%] naxatw-flex-col naxatw-gap-5 naxatw-pt-7 "
         >
           {showErrorToggle && error?.response.data.message}
 
@@ -80,7 +80,7 @@ export default function Login() {
             />
             <button
               name={showPassword ? "visibility" : "visibility_off"}
-              className="naxatw-absolute naxatw-right-2 naxatw-top-9 naxatw-cursor-pointer
+              className="naxatw-top-9 naxatw-cursor-pointer
               naxatw-text-xl naxatw-text-grey-800"
               onClick={() => handleShow()}
             >
@@ -89,7 +89,7 @@ export default function Login() {
           </div>
 
           <div className="naxatw-flex naxatw-items-center naxatw-justify-between">
-            <div className="naxatw-flex naxatw-items-center naxatw-gap-2 naxatw-pl-3  ">
+            <div className="naxatw-flex naxatw-items-center naxatw-gap-2 naxatw-pl-3">
               <input type="checkbox" id="check" {...register("keepSignedIn")} />
               <label htmlFor="check">Keep me signed in</label>
             </div>
