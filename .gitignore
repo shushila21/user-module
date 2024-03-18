@@ -1,3 +1,7 @@
+# Ignore all files except src directory
+/*
+!src/
+
 # Logs
 logs
 *.log
